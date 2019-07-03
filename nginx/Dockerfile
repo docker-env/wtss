@@ -5,5 +5,3 @@ RUN ln -snf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo "Asia/Shang
 COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
 
 WORKDIR /var/www/html/
-	
-ONBUILD COPY ./public/ ./public/
