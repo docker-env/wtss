@@ -14,6 +14,4 @@ RUN apk --no-cache add tzdata freetype-dev jpeg-dev libmcrypt-dev libpng-dev \
 	&& rm -rf /var/cache/apk/* \
 	&& mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
 
-COPY phpfpm/cacert.pem /usr/local/etc/php/
-
-COPY phpfpm/php.ini /usr/local/etc/php/
+WORKDIR /var/www/html/
